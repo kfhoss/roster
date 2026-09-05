@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>Kids Roster</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Kids Roster" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#33463B" />
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAJHUlEQVR4nO3de1BU5xnH8Zd1Qe6IoGOAlcu0Nk1NJikzaaomIURQiKiAohIvUJCpKZYYjFKDt5QtRMCMMRmbADG2KTV4IUTQBNSyloQab61NUpJYR0cDK0jVjlwXpX/sjM0kPJx34Zz37Dnz+4z/+bLn8cyX9+wuy9ElMnY6AxiKQe0BwHkhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAhDiAZBR+vsXK34CPqTFRqurBjuYi5MT6akJ2ASkRcVlCGEgScVWV3DmQhgHJbiII7B8oQQ7nzrFQcKEMkhc42XsoCSZE4sG2Ip8Q5lz8OlKEW2c88LitAQhxAkjkOXFPUJe/5x84BJMQBJMQBJMQBJMQBJMQBJMQBJMQBJMQBJMQBJNGfPh9Gq7U9funK4dcE+I87tm+PQw/b9OmZFzYX9ttskiujpv2seNM6V+P/zwnPSENycXFxNRrd3Fx9vL39fLwnTZxgCpo0JSJs6v1TwieHjOABVeFEcSjhrydP524p4ikjesZj2/LXGY1jZDnu4OBgv83Wb7Pd7upuu9becuHivb+aGBgw8/Gfz4+LmRIRJsuxlKPny4ql+RTnnjHz8WnFG2UrY3jt1zsrq2tTsnJyNhZcbbMKOOKI6TaOxk9Ort1aZBsYkFwZ8+T0V/LXjhkjooxvszSfWpD563pLk+Dj8tNnHMeb/rb25Vd4ypgVNaNoQ674Mux6+/rWF5QcOX5ClaNL0mEcDSc+efG32wYG7kiujIt+olC9MuwGBwe3lOy8ePmKijNQ9BZHvaUpz1xy5450GfFPP2nOW2MwqH8G+vr7i3dVqD3FENQ/NTI6cvxEnrmUp4w5MU8VOEcZds2nz124dFntKb7LWc7O6B0+Znmp6NW7d+9KrkyIjX55XY7BxUXAVPzqGz9We4Tv0sn7HLUNf9m0bcfdwUHJlfNmP705d7WMZXz/fbl+m62np/dqm/XzL7+uPWo5/0ULz+OcOf+5XCPJRQ9xHKo/vrn4NZ4ykuJjNq75lYvCe4abq6ubq6ufr89PfvTDlLnxVR8cLtz51qDUeJeuXFV0qhHQ/GXl/Q+PcpaR/MwsAWV8X8rc+ITYaMllnTdu8vwrRNJ2HAcPN2wtfZ3nnC5MmJ3//CrxZdglxs3kWdbb26f0JA7R8GVlf+1H5h27JLdrxljK3PjfrM5SqwzG2P0/iOBZ5j7WTelJHKLVOKoOHSl87U2eMpbMn7M+eyQ/WZWRh7u7wWAY/pWUl6en87y0ttNkHHvfryt6/S2elc8mJbz4XKbS80jq6u6RfI0dZgoWMww/7cVRWV277Y0ynpVLk+euXZWh9Dw8Wi78W3LNgz+eImASh2gsjhs3b3GWsSIlcU1WmsLj8DpQVy+5JuaJaQImcYjG4uB8sZe2KOn5lSuUHoZTZXXt4WOW4ddEhJoiH5oqZh5+GouDR8aSBaszlqk4wMDAna6enm/arJ+1fFXb0Hj+X19KfkledpaAwRyltzgyn12Ynb5U5BE7b9x8eOa80TxC+uLkRx95SK55ZKSrOLKWLnouLVXtKRyzeP4zOZnL1Z5iaPqJw9vLc/5srjcinYS3l2dedtacmKfUHoTkXO+6jMbtru6M3Jdare1qDyLN28tzRUpi3btlzlwG01McjLG2a+3O38eMRyNr3tm1JivNz8db7Vkk6CoOpoU+mj49My9t1e69B3g+l6QuvcXBtNDH7a7uHeV/WLV+S3dPr9qzDEeHcTAt9MEYO3nuH9kbtvL8/oRaNBaHh7v7+HF+PCvtfXxjvab0SKNx9p9fFL9RrvYUJI3F4enhXl5q5u8jMzdf6T4C/Mf9/WiN/c/Z+mrLwXfffrUwfXEy5/PNqkNHPj51VtEJR0xjcTDGIkJN5aXmAP9xPIvF9HGPwWDw8/X56YMP5GQu/2DP7x+LfJjnq4p2vumcFxftxcEYiwg1lZUUOGcf9/j5+uw0b3xk6gOSK6+0WisPHhIwkqM0GQdzfP/IeEGF5x+uRmPxpnU+3l6SK3e/d9AJX7loNQ7GWPjkkPJSc+B4f57F1vYOVfoIHO+fkyn94YGbt/67t6ZOwDwO0XAcjLHwySFlJQVO3kdSfExoSJDksj/uq+ntc65Pn2s7Dmbvo9SxPgTfMsVgMPxy+RLJZTdu3dpf+5GAefhpPg7GWLjJsT4yc/MF9zEraoYp+D7JZXuqqnnuQySMHuJgjIWbHHv+IbgPg8Hwi8XJkss6Ov9T8+ExAfNw0kkcjLEwU7BjfYi9viTERE+aECi5bPd7B3huISGGfuJgjvbRcV1kH0bjmBWLEiWXtVrb6442Kj8OF13FwRgLMwVXbP/dhIDxPIsF95EUH8vzxkzFn/c7yW9U6y0OxlhoSFB5qdmhPq60iuhjrJvbsgXSH0W+fLW1weIUN3LRYRzM8T5W5grqY2FCnC/HD+QqKvfx/Bqw0vQZB2MsNCSoYrvT9eHl6ZGaOEdy2VcXL1maTyk9jCTdxsEYmxwcVLHdPDEwgGexteN6Zu4GAX2kJiZ4eXpILiuvrFJ6Ekl6joPZ+yjl7eNaR6eAPnx9vBcmxEku+6zl6+bT5xSdRJLO42CMmYLvc7Y+li2YN5bjPi1lf1J583CJjJ0u48Phf6RWXVRqulwPpf+dA0YMcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQAJcQBJ5jhkvFsZjIC85x87B5AQB5DkjwNXFrXIfuYV2TnQh3hKnHNcVoCkVBzYPERS6GwruHOgDzGUO88y3xh/SLhbvkKU/vYT8ZwDW4gSBJxVETvHt2EXGSWR32mi4wANwUtZICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOICEOIP0Pi+ntHjB6kZcAAAAASUVORK5CYII=" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+
+  :root{
+    --ink:#233029; --board:#33463B; --board-dark:#2A3931;
+    --paper:#F3ECDA; --paper-edge:#E4D9BE; --chalk:#F1EAD9; --chalk-dim:#C9CFC6;
+    --alert:#D9483F; --alert-bg:#F4DEDB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; background:var(--board);
+    font-family:'Inter',system-ui,-apple-system,sans-serif; color:var(--ink);
+  }
+  .script{ font-family:'Caveat','Segoe Script',cursive; font-weight:700; }
+  .mono{ font-family:'JetBrains Mono',ui-monospace,monospace; }
+
+  header{
+    position:sticky; top:0; z-index:10; padding:22px 20px 14px;
+    background:linear-gradient(var(--board), var(--board) 85%, transparent);
+  }
+  .headrow{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .title{ font-size:2.2rem; color:var(--chalk); line-height:1; }
+  .subtitle{ font-size:.75rem; color:var(--chalk-dim); margin-top:4px; display:flex; align-items:center; gap:6px; }
+  .btn{
+    border:none; cursor:pointer; border-radius:6px; font-family:'Inter',sans-serif;
+    font-weight:600; font-size:.9rem; padding:9px 16px; display:inline-flex; align-items:center; gap:6px;
+  }
+  .btn-paper{ background:var(--paper); color:var(--ink); box-shadow:0 2px 6px rgba(0,0,0,.25); }
+  .btn-dark{ background:var(--ink); color:var(--paper); }
+  .btn-ghost{ background:#EAE2CB; color:var(--ink); }
+  .btn-danger{ background:var(--alert-bg); color:var(--alert); }
+  .btn-sm{ padding:6px 10px; font-size:.8rem; }
+
+  .searchwrap{ position:relative; max-width:280px; margin-top:14px; }
+  .searchwrap svg{ position:absolute; left:10px; top:50%; transform:translateY(-50%); }
+  .searchwrap input{
+    width:100%; padding:8px 10px 8px 30px; border-radius:6px; border:1px solid var(--board-dark);
+    background:var(--board-dark); color:var(--chalk); font-size:.85rem; outline:none;
+  }
+  .searchwrap input::placeholder{ color:var(--chalk-dim); }
+
+  .chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .chip{
+    padding:5px 11px; border-radius:999px; font-size:.7rem; font-weight:600; cursor:pointer;
+    background:transparent; color:var(--chalk-dim); border:1px solid rgba(241,234,217,.35);
+  }
+  .chip.active{ color:#26221a; }
+
+  main{ padding:0 20px 40px; }
+  .grid{
+    display:grid; gap:20px 16px; grid-template-columns:repeat(2,1fr);
+  }
+  @media(min-width:560px){ .grid{ grid-template-columns:repeat(3,1fr);} }
+  @media(min-width:820px){ .grid{ grid-template-columns:repeat(4,1fr);} }
+  @media(min-width:1100px){ .grid{ grid-template-columns:repeat(5,1fr);} }
+
+  .card{
+    position:relative; text-align:left; border-radius:6px; padding:14px 12px 12px; padding-top:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2); border:1px solid var(--paper-edge); background:var(--paper);
+    cursor:pointer; transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(0,0,0,.28); }
+  .tab{
+    position:absolute; top:-10px; left:16px; padding:2px 10px; border-radius:3px; font-size:.68rem;
+    font-weight:600; color:#26221a; box-shadow:0 1px 3px rgba(0,0,0,.25); white-space:nowrap;
+  }
+  .cardrow{ display:flex; gap:12px; align-items:flex-start; }
+  .avatar{
+    width:60px; height:60px; border-radius:6px; border:2px solid var(--paper-edge);
+    object-fit:cover; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:1.1rem; color:#26221a;
+  }
+  .kidname{ font-size:1.3rem; color:var(--ink); line-height:1.1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .meta{ font-size:.75rem; color:#5b5647; margin-top:2px; }
+  .school{ font-size:.68rem; color:#7a7461; margin-top:4px; display:flex; align-items:center; gap:4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .allergy-badge{
+    margin-top:9px; display:flex; align-items:flex-start; gap:5px; font-size:.7rem; font-weight:600;
+    padding:6px 8px; border-radius:5px; background:var(--alert-bg); color:var(--alert);
+  }
+  .allergy-badge.small{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  .empty{ text-align:center; padding:70px 20px; }
+  .empty .script{ font-size:1.6rem; color:var(--chalk); }
+  .empty p{ font-size:.9rem; color:var(--chalk-dim); margin:6px 0 16px; }
+
+  .overlay{
+    display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center;
+    padding:16px; background:rgba(20,26,20,.55);
+  }
+  .overlay.open{ display:flex; }
+  .modal{
+    position:relative; width:100%; max-width:420px; max-height:88vh; overflow-y:auto;
+    background:var(--paper); border-radius:8px; box-shadow:0 20px 50px rgba(0,0,0,.4);
+  }
+  .modal-close{
+    position:absolute; top:10px; right:10px; background:rgba(0,0,0,.06); border:none; border-radius:999px;
+    width:28px; height:28px; display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .modal-body{ padding:22px 20px 20px; }
+  .field{ margin-bottom:12px; }
+  .field label{ display:block; font-size:.68rem; text-transform:uppercase; letter-spacing:.03em; color:#9b957e; margin-bottom:4px; }
+  .field.alert-label label{ color:var(--alert); }
+  .field input, .field textarea{
+    width:100%; padding:8px 10px; border-radius:5px; border:1px solid var(--paper-edge); background:#fff;
+    font-family:'Inter',sans-serif; font-size:.9rem; outline:none; color:var(--ink); resize:vertical;
+  }
+  .field input:focus, .field textarea:focus{ border-color:#a89a6f; }
+  .field.error input{ border-color:var(--alert); }
+  .field-error{ font-size:.7rem; color:var(--alert); margin-top:3px; }
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .photorow{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+
+  .attendance{ border:1px solid var(--paper-edge); border-radius:6px; background:#FBF8F0; margin-top:6px; }
+  .attendance-head{
+    display:flex; justify-content:space-between; padding:7px 12px; border-bottom:1px solid var(--paper-edge);
+    font-size:.68rem; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:#7a7461;
+  }
+  .attendance-body{ padding:12px; }
+  .stamps{ display:flex; flex-wrap:wrap; gap:8px; }
+  .stamp{
+    width:48px; height:48px; border-radius:999px; border:2px solid var(--alert); color:var(--alert);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-6deg);
+  }
+  .stamp .d{ font-size:.6rem; font-weight:700; }
+  .novisits{ font-size:.75rem; font-style:italic; color:#9b957e; padding:6px 0; }
+
+  .toast{
+    position:fixed; bottom:18px; left:50%; transform:translateX(-50%); background:var(--ink); color:var(--paper);
+    padding:9px 16px; border-radius:6px; font-size:.85rem; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:60;
+    opacity:0; pointer-events:none; transition:opacity .2s ease;
+  }
+  .toast.show{ opacity:1; }
+  .save-error{ margin-bottom:12px; font-size:.8rem; padding:8px 12px; border-radius:6px; background:var(--alert-bg); color:var(--alert); }
+
+  .modal.wide{ max-width:920px; width:95vw; }
+  .chip-light{
+    padding:5px 11px; border-radius:999px; font-size:.7rem; font-weight:600; cursor:pointer;
+    background:#EAE2CB; color:var(--ink); border:1px solid var(--paper-edge);
+  }
+  .chip-light.active{ background:var(--ink); color:var(--paper); }
+  .reporttable-wrap{ overflow-x:auto; margin-top:14px; border:1px solid var(--paper-edge); border-radius:6px; }
+  .reporttable{ width:100%; border-collapse:collapse; font-size:.78rem; }
+  .reporttable th, .reporttable td{ border-bottom:1px solid var(--paper-edge); padding:6px 10px; }
+  .reporttable thead th{ font-size:.65rem; text-transform:uppercase; letter-spacing:.02em; color:#7a7461; background:#FBF8F0; }
+  .reporttable th:first-child, .reporttable td:first-child{
+    position:sticky; left:0; background:var(--paper); z-index:2; text-align:left; min-width:140px;
+  }
+  .reporttable thead th:first-child{ background:#FBF8F0; z-index:3; }
+  .reporttable td, .reporttable th{ text-align:center; white-space:nowrap; }
+  .reportname{ display:flex; align-items:center; gap:6px; }
+
+  .footer-note{ text-align:center; font-size:.68rem; color:var(--chalk-dim); padding:0 20px 24px; }
+  .footer-note button{ background:none; border:none; color:var(--chalk); text-decoration:underline; cursor:pointer; font-size:.68rem; padding:0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="headrow">
+    <div>
+      <div class="title script">Kids Roster</div>
+      <div class="subtitle" id="countLabel">0 kids on the board</div>
+    </div>
+    <button class="btn btn-paper" onclick="openCreateModal()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      Add kid
+    </button>
+  </div>
+
+  <div class="headrow" style="margin-top:8px">
+    <button class="btn btn-ghost btn-sm" onclick="openReportModal()">📊 Attendance report</button>
+  </div>
+
+  <div class="searchwrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9188" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="searchInput" placeholder="Search by name" oninput="renderGrid()" />
+  </div>
+
+  <div class="chips" id="chipRow"></div>
+</header>
+
+<main>
+  <div id="saveErrorBox"></div>
+  <div id="gridWrap"></div>
+</main>
+
+<div class="footer-note">
+  Data lives only in this browser &middot;
+  <button onclick="exportBackup()">Export backup</button> &middot;
+  <button onclick="document.getElementById('importFile').click()">Import backup</button>
+  <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importBackup(event)" />
+</div>
+
+<div class="overlay" id="modalOverlay"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------------- design tokens ---------------- */
+const TAB_PALETTE = ["#E4636F","#F0975A","#F4C95D","#8FBF8B","#5FA8A3","#6FA8C9","#8B8FC9","#C98FB0"];
+
+function hashColor(str){
+  if(!str) return "#B8A88A";
+  let h=0; for(let i=0;i<str.length;i++) h = str.charCodeAt(i) + ((h<<5)-h);
+  return TAB_PALETTE[Math.abs(h) % TAB_PALETTE.length];
+}
+function getAge(dobStr){
+  if(!dobStr) return null;
+  const dob = new Date(dobStr+"T00:00:00"); if(isNaN(dob)) return null;
+  const today = new Date();
+  let age = today.getFullYear()-dob.getFullYear();
+  const m = today.getMonth()-dob.getMonth();
+  if(m<0 || (m===0 && today.getDate()<dob.getDate())) age--;
+  return age;
+}
+function todayISO(){ return new Date().toISOString().slice(0,10); }
+function formatDate(iso){ const d=new Date(iso+"T00:00:00"); return d.toLocaleDateString(undefined,{month:"short",day:"numeric"}); }
+function initials(name){ return (name||"?").split(" ").filter(Boolean).slice(0,2).map(s=>s[0].toUpperCase()).join(""); }
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,8); }
+function escapeHtml(s){ return (s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+function fileToSquareDataUrl(file, size=240){
+  return new Promise((resolve,reject)=>{
+    const reader = new FileReader();
+    reader.onerror = ()=>reject(new Error("read failed"));
+    reader.onload = ()=>{
+      const img = new Image();
+      img.onerror = ()=>reject(new Error("image load failed"));
+      img.onload = ()=>{
+        const canvas = document.createElement("canvas");
+        canvas.width = size; canvas.height = size;
+        const ctx = canvas.getContext("2d");
+        const side = Math.min(img.width, img.height);
+        const sx = (img.width-side)/2, sy = (img.height-side)/2;
+        ctx.drawImage(img, sx, sy, side, side, 0, 0, size, size);
+        resolve(canvas.toDataURL("image/jpeg", 0.78));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+/* ---------------- storage (IndexedDB) ---------------- */
+let db;
+function openDb(){
+  return new Promise((resolve,reject)=>{
+    const req = indexedDB.open("kidsRosterDB", 1);
+    req.onupgradeneeded = () => { req.result.createObjectStore("kv"); };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+function idbGet(key){
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction("kv","readonly");
+    const req = tx.objectStore("kv").get(key);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+function idbSet(key,val){
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction("kv","readwrite");
+    tx.objectStore("kv").put(val,key);
+    tx.oncomplete = () => resolve(true);
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
+/* ---------------- state ---------------- */
+let kids = [];
+let attendance = {};
+let filterClass = "all";
+let openKidId = null;      // id of kid whose detail modal is open
+let creatingNew = false;
+
+async function init(){
+  try{
+    db = await openDb();
+    kids = (await idbGet("kids")) || [];
+    attendance = (await idbGet("attendance")) || {};
+  }catch(e){
+    console.error(e);
+    showSaveError("Couldn't open local storage in this browser.");
+  }
+  renderChips();
+  renderGrid();
+}
+window.addEventListener("load", init);
+
+async function persistKids(){
+  document.getElementById("countLabel").textContent = `${kids.length} kid${kids.length===1?"":"s"} on the board`;
+  try{ await idbSet("kids", kids); clearSaveError(); }
+  catch(e){ showSaveError("Couldn't save that change. Try again."); }
+}
+async function persistAttendance(){
+  try{ await idbSet("attendance", attendance); }
+  catch(e){ showSaveError("Couldn't save attendance. Try again."); }
+}
+function showSaveError(msg){
+  document.getElementById("saveErrorBox").innerHTML = `<div class="save-error">${escapeHtml(msg)}</div>`;
+}
+function clearSaveError(){ document.getElementById("saveErrorBox").innerHTML = ""; }
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"), 1800);
+}
+
+/* ---------------- rendering: chips + grid ---------------- */
+function renderChips(){
+  const classNames = [...new Set(kids.map(k=>k.className).filter(Boolean))].sort();
+  const row = document.getElementById("chipRow");
+  if(classNames.length===0){ row.innerHTML=""; return; }
+  let html = `<div class="chip ${filterClass==='all'?'active':''}" style="${filterClass==='all'?'background:var(--chalk);border-color:var(--chalk)':''}" onclick="setFilter('all')">All</div>`;
+  classNames.forEach(c=>{
+    const active = filterClass===c;
+    const color = hashColor(c);
+    html += `<div class="chip ${active?'active':''}" style="${active?`background:${color};border-color:${color}`:''}" onclick="setFilter('${encodeURIComponent(c)}')">${escapeHtml(c)}</div>`;
+  });
+  row.innerHTML = html;
+}
+function setFilter(encoded){
+  filterClass = encoded==='all' ? 'all' : decodeURIComponent(encoded);
+  renderChips(); renderGrid();
+}
+
+function renderGrid(){
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = kids.filter(k=>{
+    if(filterClass!=='all' && k.className!==filterClass) return false;
+    if(search && !(k.name||"").toLowerCase().includes(search)) return false;
+    return true;
+  });
+  document.getElementById("countLabel").textContent = `${kids.length} kid${kids.length===1?"":"s"} on the board`;
+  const wrap = document.getElementById("gridWrap");
+
+  if(filtered.length===0){
+    wrap.innerHTML = `<div class="empty">
+      <div class="script">${kids.length===0?'The board is empty':'No matches'}</div>
+      <p>${kids.length===0?'Add your first kid to get started.':'Try a different search or class.'}</p>
+      ${kids.length===0?`<button class="btn btn-paper" onclick="openCreateModal()">+ Add kid</button>`:""}
+    </div>`;
+    return;
+  }
+
+  wrap.innerHTML = `<div class="grid">${filtered.map(cardHtml).join("")}</div>`;
+}
+
+function avatarHtml(kid, size){
+  const color = hashColor(kid.className);
+  if(kid.photo){
+    return `<img class="avatar" style="width:${size}px;height:${size}px" src="${kid.photo}" alt="">`;
+  }
+  return `<div class="avatar" style="width:${size}px;height:${size}px;background:${color};font-size:${size*0.32}px">${escapeHtml(initials(kid.name))}</div>`;
+}
+
+function cardHtml(kid){
+  const age = getAge(kid.dob);
+  const color = hashColor(kid.className);
+  const allergy = kid.allergies && kid.allergies.trim();
+  return `
+  <div class="card" onclick="openDetailModal('${kid.id}')">
+    <div class="tab" style="background:${color}">${escapeHtml(kid.className)||"Unassigned"}</div>
+    <div class="cardrow">
+      ${avatarHtml(kid,60)}
+      <div style="min-width:0;flex:1">
+        <div class="kidname script">${escapeHtml(kid.name)||"Unnamed"}</div>
+        <div class="meta">${age!==null?age+" yrs":"—"} ${kid.grade?"&middot; "+escapeHtml(kid.grade):""}</div>
+        ${kid.school?`<div class="school">📍 ${escapeHtml(kid.school)}</div>`:""}
+      </div>
+    </div>
+    ${allergy?`<div class="allergy-badge small">⚠ ${escapeHtml(kid.allergies)}</div>`:""}
+  </div>`;
+}
+
+/* ---------------- modal: detail view ---------------- */
+function openDetailModal(id){
+  openKidId = id;
+  renderDetailModal();
+  document.getElementById("modalOverlay").classList.add("open");
+}
+function closeModal(){
+  document.getElementById("modalOverlay").classList.remove("open");
+  document.getElementById("modalOverlay").innerHTML = "";
+  openKidId = null; creatingNew = false;
+}
+
+function renderDetailModal(){
+  const kid = kids.find(k=>k.id===openKidId);
+  if(!kid) return closeModal();
+  const age = getAge(kid.dob);
+  const color = hashColor(kid.className);
+  const dates = (attendance[kid.id]||[]).slice().sort().reverse();
+  const recent = dates.slice(0,10);
+  const markedToday = dates.includes(todayISO());
+  const allergy = kid.allergies && kid.allergies.trim();
+
+  document.getElementById("modalOverlay").innerHTML = `
+    <div class="modal">
+      <div class="tab" style="background:${color}">${escapeHtml(kid.className)||"Unassigned"}</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-body">
+        <div class="cardrow">
+          ${avatarHtml(kid,84)}
+          <div>
+            <div style="font-size:2rem" class="script">${escapeHtml(kid.name)}</div>
+            <div style="font-size:.85rem;color:#5b5647;margin-top:2px">${age!==null?age+" years old":"Age unknown"}</div>
+          </div>
+        </div>
+        ${allergy?`<div class="allergy-badge" style="margin-top:14px">⚠ ${escapeHtml(kid.allergies)}</div>`:""}
+        <div class="row2" style="margin-top:14px;font-size:.9rem">
+          <div><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">Birthday</div>${escapeHtml(kid.dob)||"—"}</div>
+          <div><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">Grade</div>${escapeHtml(kid.grade)||"—"}</div>
+          <div style="grid-column:span 2"><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">School</div>${escapeHtml(kid.school)||"—"}</div>
+          ${kid.notes?`<div style="grid-column:span 2"><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">Notes</div>${escapeHtml(kid.notes)}</div>`:""}
+        </div>
+
+        ${(kid.parentName || kid.parentPhone) ? `
+        <div class="row2" style="margin-top:6px;font-size:.9rem">
+          ${kid.parentName?`<div><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">Parent/guardian</div>${escapeHtml(kid.parentName)}</div>`:"<div></div>"}
+          ${kid.parentPhone?`<div><div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e">Phone</div>${escapeHtml(kid.parentPhone)}</div>`:""}
+        </div>` : ""}
+
+        ${(kid.siblingIds && kid.siblingIds.length>0) ? `
+        <div style="margin-top:14px">
+          <div class="field label" style="font-size:.68rem;text-transform:uppercase;color:#9b957e;margin-bottom:6px">Siblings</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${kid.siblingIds.map(sid=>{
+              const sib = kids.find(k=>k.id===sid);
+              if(!sib) return "";
+              return `<div class="chip-light" style="display:flex;align-items:center;gap:6px" onclick="openDetailModal('${sid}')">${avatarHtml(sib,18)}<span>${escapeHtml(sib.name)}</span></div>`;
+            }).join("")}
+          </div>
+        </div>` : ""}
+
+        <div class="attendance">
+          <div class="attendance-head"><span>Attendance card</span><span class="mono">${dates.length} visits</span></div>
+          <div class="attendance-body">
+            ${recent.length===0?`<div class="novisits">No visits stamped yet.</div>`:
+              `<div class="stamps">${recent.map(d=>`<div class="stamp" title="${d}">✓<span class="d mono">${formatDate(d)}</span></div>`).join("")}</div>`}
+            <button class="btn ${markedToday?'btn-ghost':'btn-dark'}" style="width:100%;justify-content:center;margin-top:12px" onclick="toggleToday('${kid.id}')">
+              ✓ ${markedToday?"Marked present today":"Stamp present today"}
+            </button>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:18px">
+          <button class="btn btn-dark" style="flex:1;justify-content:center" onclick="openEditModal('${kid.id}')">✎ Edit</button>
+          <button class="btn btn-danger" onclick="deleteKid('${kid.id}')">🗑</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function toggleToday(id){
+  const today = todayISO();
+  const cur = attendance[id] || [];
+  attendance[id] = cur.includes(today) ? cur.filter(d=>d!==today) : [...cur, today];
+  persistAttendance();
+  renderDetailModal();
+}
+
+function deleteKid(id){
+  const kid = kids.find(k=>k.id===id);
+  if(!kid) return;
+  if(!confirm(`Remove ${kid.name} from the roster? This can't be undone.`)) return;
+  kids = kids.filter(k=>k.id!==id).map(k=>{
+    if(k.siblingIds && k.siblingIds.includes(id)){
+      return {...k, siblingIds: k.siblingIds.filter(sid=>sid!==id)};
+    }
+    return k;
+  });
+  delete attendance[id];
+  persistKids(); persistAttendance();
+  renderChips(); renderGrid();
+  closeModal();
+}
+
+/* ---------------- modal: create / edit form ---------------- */
+function openCreateModal(){
+  creatingNew = true;
+  openKidId = null;
+  const blank = { id:uid(), name:"", dob:"", school:"", className:"", grade:"", allergies:"", notes:"", photo:null, parentName:"", parentPhone:"", siblingIds:[] };
+  renderFormModal(blank);
+  document.getElementById("modalOverlay").classList.add("open");
+}
+function openEditModal(id){
+  creatingNew = false;
+  openKidId = id;
+  const kid = kids.find(k=>k.id===id);
+  renderFormModal(kid);
+  document.getElementById("modalOverlay").classList.add("open");
+}
+
+let draftPhoto = null;
+
+function renderFormModal(kid){
+  draftPhoto = kid.photo || null;
+  const color = hashColor(kid.className);
+  const otherKids = kids.filter(k=>k.id!==kid.id);
+  const siblingIds = kid.siblingIds || [];
+  document.getElementById("modalOverlay").innerHTML = `
+    <div class="modal">
+      <div class="tab" style="background:${color}">${escapeHtml(kid.className)||"Unassigned"}</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-body">
+        <form id="kidForm">
+          <div class="photorow">
+            <div id="avatarPreview">${avatarHtml({photo:kid.photo, className:kid.className, name:kid.name},64)}</div>
+            <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('photoInput').click()">📷 ${kid.photo?"Change photo":"Add photo"}</button>
+            <input type="file" id="photoInput" accept="image/*" style="display:none" onchange="handlePhotoPick(event)">
+          </div>
+
+          <div class="field" id="nameField">
+            <label>Name</label>
+            <input id="fName" value="${escapeHtml(kid.name)}">
+            <div class="field-error" id="nameError" style="display:none">Enter a name before saving.</div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label>Birthday</label>
+              <input type="date" id="fDob" value="${kid.dob||""}">
+            </div>
+            <div class="field">
+              <label>Grade</label>
+              <input id="fGrade" value="${escapeHtml(kid.grade)}" placeholder="e.g. 2nd grade">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label>Class</label>
+              <input id="fClass" value="${escapeHtml(kid.className)}" placeholder="e.g. Fireflies, Room 12">
+            </div>
+            <div class="field">
+              <label>School</label>
+              <input id="fSchool" value="${escapeHtml(kid.school)}">
+            </div>
+          </div>
+
+          <div class="field alert-label">
+            <label>Allergies</label>
+            <textarea id="fAllergies" rows="2" placeholder="Leave blank if none">${escapeHtml(kid.allergies)}</textarea>
+          </div>
+
+          <div class="field">
+            <label>Notes</label>
+            <textarea id="fNotes" rows="2">${escapeHtml(kid.notes)}</textarea>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label>Parent / guardian</label>
+              <input id="fParentName" value="${escapeHtml(kid.parentName)}" placeholder="e.g. Sarah &amp; Mike Johnson">
+            </div>
+            <div class="field">
+              <label>Parent phone</label>
+              <input id="fParentPhone" type="tel" value="${escapeHtml(kid.parentPhone)}" placeholder="e.g. (555) 123-4567">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Siblings on the roster</label>
+            ${otherKids.length===0
+              ? `<div style="font-size:.8rem;color:#9b957e;font-style:italic">Add other kids first to link them as siblings.</div>`
+              : `<div style="max-height:150px;overflow-y:auto;border:1px solid var(--paper-edge);border-radius:6px;padding:6px 8px;background:#fff">
+                  ${otherKids.map(o=>`
+                    <label style="display:flex;align-items:center;gap:8px;padding:4px 0;font-size:.85rem;cursor:pointer">
+                      <input type="checkbox" class="siblingCheckbox" value="${o.id}" ${siblingIds.includes(o.id)?'checked':''}>
+                      ${avatarHtml(o,22)}
+                      <span>${escapeHtml(o.name)}</span>
+                    </label>`).join("")}
+                 </div>`}
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:4px">
+            <button type="submit" class="btn btn-dark" style="flex:1;justify-content:center">Save</button>
+            <button type="button" class="btn btn-ghost" onclick="${creatingNew?'closeModal()':`openDetailModal('${kid.id}')`}">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>`;
+
+  document.getElementById("kidForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    submitForm(kid.id);
+  });
+}
+
+async function handlePhotoPick(e){
+  const file = e.target.files && e.target.files[0];
+  if(!file) return;
+  try{
+    draftPhoto = await fileToSquareDataUrl(file);
+    document.getElementById("avatarPreview").innerHTML = avatarHtml({photo:draftPhoto},64);
+  }catch(err){ console.error(err); toast("Couldn't load that photo"); }
+}
+
+function submitForm(existingId){
+  const name = document.getElementById("fName").value.trim();
+  if(!name){
+    document.getElementById("nameField").classList.add("error");
+    document.getElementById("nameError").style.display = "block";
+    return;
+  }
+  const newSiblingIds = Array.from(document.querySelectorAll(".siblingCheckbox:checked")).map(cb=>cb.value);
+  const data = {
+    id: existingId,
+    name,
+    dob: document.getElementById("fDob").value,
+    className: document.getElementById("fClass").value.trim(),
+    grade: document.getElementById("fGrade").value.trim(),
+    school: document.getElementById("fSchool").value.trim(),
+    allergies: document.getElementById("fAllergies").value.trim(),
+    notes: document.getElementById("fNotes").value.trim(),
+    photo: draftPhoto,
+    parentName: document.getElementById("fParentName").value.trim(),
+    parentPhone: document.getElementById("fParentPhone").value.trim(),
+    siblingIds: newSiblingIds
+  };
+
+  const existed = kids.some(k=>k.id===existingId);
+  let updatedKids = existed ? kids.map(k => k.id===existingId ? data : k) : [data, ...kids];
+
+  // keep sibling links in sync on both sides
+  updatedKids = updatedKids.map(k=>{
+    if(k.id===existingId) return k;
+    const sibs = k.siblingIds || [];
+    const shouldHave = newSiblingIds.includes(k.id);
+    const hasNow = sibs.includes(existingId);
+    if(shouldHave && !hasNow) return {...k, siblingIds:[...sibs, existingId]};
+    if(!shouldHave && hasNow) return {...k, siblingIds: sibs.filter(id=>id!==existingId)};
+    return k;
+  });
+
+  kids = updatedKids;
+  persistKids();
+  renderChips(); renderGrid();
+  openKidId = data.id;
+  openDetailModal(data.id);
+}
+
+/* ---------------- attendance report ---------------- */
+let reportWeeks = 4;
+let reportClassFilter = "all";
+
+function openReportModal(){
+  renderReportModal();
+  document.getElementById("modalOverlay").classList.add("open");
+}
+function setReportWeeks(w){ reportWeeks = w; renderReportModal(); }
+function setReportClassFilter(encoded){
+  reportClassFilter = encoded==='all' ? 'all' : decodeURIComponent(encoded);
+  renderReportModal();
+}
+
+function reportCutoffDate(){
+  if(reportWeeks==='all') return null;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - reportWeeks*7);
+  return cutoff;
+}
+
+function renderReportModal(){
+  const cutoff = reportCutoffDate();
+  const classNames = [...new Set(kids.map(k=>k.className).filter(Boolean))].sort();
+  const relevantKids = kids.filter(k => reportClassFilter==='all' || k.className===reportClassFilter);
+
+  let dateSet = new Set();
+  relevantKids.forEach(k=>{
+    (attendance[k.id]||[]).forEach(d=>{
+      if(!cutoff || new Date(d+"T00:00:00") >= cutoff) dateSet.add(d);
+    });
+  });
+  const dates = [...dateSet].sort();
+
+  const rangeChips = [
+    {label:"4 weeks", val:4}, {label:"8 weeks", val:8}, {label:"12 weeks", val:12}, {label:"All time", val:"all"}
+  ].map(r => `<div class="chip-light ${reportWeeks===r.val?'active':''}" onclick="setReportWeeks(${typeof r.val==='number'?r.val:`'${r.val}'`})">${r.label}</div>`).join("");
+
+  const classChips = `<div class="chip-light ${reportClassFilter==='all'?'active':''}" onclick="setReportClassFilter('all')">All classes</div>` +
+    classNames.map(c => `<div class="chip-light ${reportClassFilter===c?'active':''}" onclick="setReportClassFilter('${encodeURIComponent(c)}')">${escapeHtml(c)}</div>`).join("");
+
+  let tableHtml;
+  if(relevantKids.length===0){
+    tableHtml = `<div class="novisits" style="padding:16px 0">No kids match this filter.</div>`;
+  } else if(dates.length===0){
+    tableHtml = `<div class="novisits" style="padding:16px 0">No attendance recorded in this range yet.</div>`;
+  } else {
+    const headerCells = dates.map(d=>`<th>${formatDate(d)}</th>`).join("");
+    const rows = relevantKids.map(k=>{
+      const kidDates = new Set(attendance[k.id]||[]);
+      const total = dates.filter(d=>kidDates.has(d)).length;
+      const cells = dates.map(d=> kidDates.has(d)
+        ? `<td style="color:#3E6B4A;font-weight:700">✓</td>`
+        : `<td style="color:#c9c2ac">–</td>`
+      ).join("");
+      return `<tr>
+        <td><div class="reportname">${avatarHtml(k,22)}<span>${escapeHtml(k.name)}</span></div></td>
+        ${cells}
+        <td class="mono" style="font-weight:700">${total}</td>
+      </tr>`;
+    }).join("");
+    const footerCells = dates.map(d=>{
+      const count = relevantKids.filter(k=>(attendance[k.id]||[]).includes(d)).length;
+      return `<td class="mono" style="font-weight:700">${count}</td>`;
+    }).join("");
+
+    tableHtml = `<div class="reporttable-wrap">
+      <table class="reporttable">
+        <thead><tr><th>Kid</th>${headerCells}<th>Total</th></tr></thead>
+        <tbody>${rows}</tbody>
+        <tfoot><tr style="background:#FBF8F0"><td style="font-weight:700">Present</td>${footerCells}<td></td></tr></tfoot>
+      </table>
+    </div>`;
+  }
+
+  document.getElementById("modalOverlay").innerHTML = `
+    <div class="modal wide">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-body">
+        <div style="font-size:1.6rem" class="script">Attendance report</div>
+        <div class="chips" style="margin-top:8px">${rangeChips}</div>
+        ${classNames.length>0 ? `<div class="chips" style="margin-top:6px">${classChips}</div>` : ""}
+        ${tableHtml}
+        ${dates.length>0 ? `<button class="btn btn-ghost btn-sm" style="margin-top:14px" onclick="downloadReportCSV()">⬇ Download as CSV</button>` : ""}
+      </div>
+    </div>`;
+}
+
+function downloadReportCSV(){
+  const cutoff = reportCutoffDate();
+  const relevantKids = kids.filter(k => reportClassFilter==='all' || k.className===reportClassFilter);
+  let dateSet = new Set();
+  relevantKids.forEach(k=>{
+    (attendance[k.id]||[]).forEach(d=>{
+      if(!cutoff || new Date(d+"T00:00:00") >= cutoff) dateSet.add(d);
+    });
+  });
+  const dates = [...dateSet].sort();
+  const header = ["Name","Class", ...dates, "Total"];
+  const rows = relevantKids.map(k=>{
+    const kidDates = new Set(attendance[k.id]||[]);
+    const total = dates.filter(d=>kidDates.has(d)).length;
+    return [k.name, k.className||"", ...dates.map(d=>kidDates.has(d)?"1":"0"), total];
+  });
+  const csv = [header, ...rows].map(r => r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const blob = new Blob([csv], {type:"text/csv"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `attendance-report-${todayISO()}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  toast("Report downloaded");
+}
+
+/* ---------------- backup export / import ---------------- */
+function exportBackup(){
+  const payload = { kids, attendance, exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `kids-roster-backup-${todayISO()}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  toast("Backup downloaded");
+}
+
+function importBackup(e){
+  const file = e.target.files && e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = async () => {
+    try{
+      const data = JSON.parse(reader.result);
+      if(!Array.isArray(data.kids)) throw new Error("bad format");
+      if(!confirm("Import will replace all data currently on this device with the backup file. Continue?")) { e.target.value=""; return; }
+      kids = data.kids;
+      attendance = data.attendance || {};
+      await persistKids(); await persistAttendance();
+      renderChips(); renderGrid();
+      toast("Backup imported");
+    }catch(err){
+      console.error(err);
+      alert("That file doesn't look like a valid roster backup.");
+    }
+    e.target.value = "";
+  };
+  reader.readAsText(file);
+}
+</script>
+</body>
+</html>
